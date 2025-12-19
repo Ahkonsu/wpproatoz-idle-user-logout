@@ -1,10 +1,13 @@
-=== Idle User Logout ===
-Contributors: abiralneupane
+=== WPProAtoZ Idle User Logout ===
+forked from: abiralneupane
 Tags: auto, logout, signout, interval, duration, automatic, auto logout, idle time, idle user
-
-Requires at least: 3.0
-Tested up to: 6.5
+Requires at least: 6.0
+Tested up to: 6.9
 Stable tag: 3.1
+Requires PHP: 8.0
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
 
 This plugin automatically logs out the user after a period of idle time. The time period can be configured from admin end.
 

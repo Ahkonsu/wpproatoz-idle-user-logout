@@ -1,12 +1,46 @@
 <?php
-/*
-Plugin Name: Idle User Logout
-Plugin URI: http://wordpress.org/extend/plugins/idle-user-logout/
-Description: This plugin automatically logs out the user after a period of idle time. The time period can be configured from admin end.
-Version: 3.1
-Author: Abiral Neupane
-Author URI: http://abiralneupane.com.np
-*/
+/**
+ * Plugin Name: WPProAtoz Idle User Logout for WP
+ * Plugin URI: https://github.com/Ahkonsu/wpproatoz-llms-txt-for-wp
+ * Forked from: http://wordpress.org/extend/plugins/idle-user-logout/
+ * Description: This plugin automatically logs out the user after a period of idle time. The time period can be configured from admin end.
+ * Version: 3,1
+ * Requires at least: 6.0
+ * Requires PHP: 8.0
+ * Author: WPProAtoZ
+ * Author URI: https://WPProAtoZ.com
+ * OriginalAuthor: Abiral Neupane
+ * OriginalAuthor URI: http://abiralneupane.com.np
+ * License: GPL v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: wpproatoz-llms-txt-for-wp
+ * Domain Path: /languages
+ * Update URI: https://github.com/Ahkonsu/wpproatoz-llms-txt-for-wp/releases
+ * GitHub Plugin URI: https://github.com/Ahkonsu/wpproatoz-llms-txt-for-wp/releases
+ * GitHub Branch: main
+ */
+
+////***check for updates code
+
+require 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/Ahkonsu/wpproatoz-idle-user-logout',
+	__FILE__,
+	'wpproatoz-idle-user-logout'
+);
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
+
+//$myUpdateChecker->getVcsApi()->enableReleaseAssets();
+ 
+ 
+//Optional: If you're using a private repository, specify the access token like this:
+//$myUpdateChecker->setAuthentication('your-token-here');
+
+/////////////////////
 
 // If this file is called directly, abort.
 if ( ! defined( 'ABSPATH' ) ) {
